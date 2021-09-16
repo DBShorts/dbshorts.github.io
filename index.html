@@ -177,6 +177,7 @@
       const scaffolding = new Scaffolding.Scaffolding();
       scaffolding.width = 640;
       scaffolding.height = 360;
+      scaffolding.resizeToFill = false;
       scaffolding.setup();
       scaffolding.appendTo(appElement);
 
@@ -244,7 +245,7 @@
             }
           } else {
             if (document.body.requestFullscreen) {
-              document.body.requestFullscreen()
+              document.body.requestFullscreen();
             } else if (document.body.webkitRequestFullscreen) {
               document.body.webkitRequestFullscreen();
             }
@@ -318,6 +319,21 @@
         }
       });
     }
+
+    // Electron hook
+    if (false) {
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "F11") {
+          e.preventDefault();
+          if (document.fullscreenElement) {
+            document.exitFullscreen();
+          } else {
+            document.body.requestFullscreen();
+          }
+        }
+      });
+    }
+
     
   </script>
   <script>
