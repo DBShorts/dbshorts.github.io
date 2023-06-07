@@ -1,4 +1,4 @@
 # dbshorts.github.io
-a list of all of my projects (w.i.p.)
+this site gone. go to https://www.damian-is-silly.xyz now.
 # recent updates
 random stuff button
